@@ -1,3 +1,13 @@
+/*
+  groovylint-disable 
+                      CompileStatic, 
+                      LineLength, 
+                      MethodParameterTypeRequired, 
+                      MethodReturnTypeRequired, 
+                      NoDef, 
+                      UnnecessaryPackageReference, 
+                      UnusedImport 
+*/
 import groovy.json.JsonSlurperClassic
 
 def jsonParse(def json) {
@@ -12,7 +22,7 @@ pipeline {
     stage('Fase # 1') {
           steps {
               script {
-                    sh "echo 'hola mundo 1'"
+                    sh "echo 'Hola Mundo 1'"
               }
           }
     }
@@ -20,7 +30,7 @@ pipeline {
     stage('Fase # 2') {
           steps {
               script {
-                    sh "echo 'hola mundo 2'"
+                    sh "echo 'Hola Mundo 2'"
               }
           }
         }
@@ -29,14 +39,14 @@ pipeline {
   post {
       always {
           deleteDir()
-          sh "echo 'fase always'"
+          sh "echo 'Post Fase - Always'"
       }
       success {
-        sh "echo 'fase success'"
+        sh "echo 'Post Fase - Success'"
       }
 
       failure {
-        sh "echo 'fase failure'"
+        sh "echo 'Post Fase - Failure'"
       }
   }
 }
