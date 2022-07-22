@@ -4,4 +4,4 @@ This is a test repo for jenkins.
 
 Hello world!!!.
 
-TEST-JENKINS-BRANCK
+TEST-JENKINS-BRANCH
